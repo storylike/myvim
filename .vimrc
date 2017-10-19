@@ -142,23 +142,23 @@ noremap <c-j> <c-w>j
 "move to left window
 noremap <c-h> <c-w>h
 "goto the place where word definition
-nmap <C-[>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap \g :cs find g <C-R>=expand("<cword>")<CR><CR>
 "list the funcion called by this function
-nmap <C-[>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap \d :cs find d <C-R>=expand("<cword>")<CR><CR>
 "list the position where to call this word
-nmap <C-[>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap \c :cs find c <C-R>=expand("<cword>")<CR><CR>
 "search word in the project
-nmap <C-[>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap \s :cs find s <C-R>=expand("<cword>")<CR><CR>
 "search word in the project and the word can be in text
-nmap <C-[>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap \t :cs find t <C-R>=expand("<cword>")<CR><CR>
 "search word in the project and the word can be in text, support regex
-nmap <C-[>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap \e :cs find e <C-R>=expand("<cword>")<CR><CR>
 "list the file which filename is this word
-nmap <C-[>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap \f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 "list the file include the file which filename is this word
-nmap <C-[>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap \i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 "list the file which include this file
-nmap <C-[>I :cs find i <C-R>=expand("%:t")<CR><CR>
+nmap \I :cs find i <C-R>=expand("%:t")<CR><CR>
 
 if has("cscope") 
     set nocsverb
@@ -168,5 +168,15 @@ if has("cscope")
 endif
 
 " My personal config
+
+" Fold/unfold options
 set nofoldenable
+set foldmethod=indent
+"set foldmethod=syntax
+
+" Set fold nest max to 1
+set foldnestmax=2
+set foldlevel=1
+
+" Set line numbers
 set number

@@ -42,6 +42,11 @@ Plugin 'majutsushi/tagbar'
 " Python-mode plugin
 Plugin 'klen/python-mode'
 Plugin 'ctrlpvim/ctrlp'
+Plugin 'justinmk/vim-syntax-extra'
+Plugin 'hdima/python-syntax'
+Plugin 'craigemery/vim-autotag'
+Plugin 'ervandew/supertab'
+Plugin 'tmhedberg/SimpylFold'
 call vundle#end()
 
 
@@ -170,13 +175,15 @@ endif
 " My personal config
 
 " Fold/unfold options
+let g:pymode_ident = 1
+let g:pymode_folding = 1
 set nofoldenable
 set foldmethod=indent
 "set foldmethod=syntax
 
 " Set fold nest max to 1
 set foldnestmax=2
-set foldlevel=1
+set foldlevel=99
 
 " Set line numbers
 set number

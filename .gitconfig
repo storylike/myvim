@@ -1,0 +1,9 @@
+[core]
+	autocrlf = input
+	editor = vim
+[user]
+	name = Greg Ge
+	email = storylike@163.com
+
+url= git@github.com:storylike/myvim.git
+

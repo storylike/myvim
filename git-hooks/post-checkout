@@ -1,0 +1,27 @@
+#!/bin/sh
+# post-checkout hooks
+# The post-checkout hook receives three parameters:
+
+### Ref of previous HEAD
+### Ref of new HEAD
+### Whether this is a file checkout (0) or branch checkout (1)
+
+# Echo something to confirm this hook is working
+# Generate cscope.file from source files
+# Generate cscoope databases for VIM to load.
+prev_head="$1"
+new_head="$2"
+RED='\033[0;31m'     # Color Red
+GREEN='\033[0;32m'   # Color Green
+NC='\033[0m'    # No color
+if [ "$3" == "0" ]
+then
+    echo "File checkout!"
+else
+    origin_branch=$(git for-each-ref --format='%(objectname) %(refname:short)' refs/heads | awk "/^$prev_head/ {print \$2}")
+    target_branch=$(git for-each-ref --format='%(objectname) %(refname:short)' refs/heads | awk "/^$new_head/ {print \$2}")
+    printf "Checking out branch from ${RED}$origin_branch${NC} to ${GREEN}$target_branch${NC}!\n"
+fi
+
+find . -name '*.c' -o -name '*.h' -o -name '*.py' -o -name '*makefile*' -o -name '*.xml' > ./cscope.files
+cscope -Rbq

@@ -3,6 +3,7 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
+set rtp+=/root/.vim/bundle
 set rtp+=/root/.vim/bundle/Vundle.vim
 set rtp+=/root/.vim/bundle/ctrlp.vim
 call vundle#begin()
@@ -187,3 +188,7 @@ set foldlevel=99
 
 " Set line numbers
 set number
+
+" Enable multi-color highlight plugin: mark.vim"
+let mapleader = ";"
+source /root/.vim/bundle/mark.vim

@@ -48,6 +48,7 @@ Plugin 'hdima/python-syntax'
 Plugin 'craigemery/vim-autotag'
 Plugin 'ervandew/supertab'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'webdevel/tabulous'
 call vundle#end()
 
 
@@ -84,6 +85,7 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeDirArrows=0
 let NERDTreeWinSize=40
 let NERDRemoveExtraSpaces=0
+"let NERDTreeMapOpenInTab='\r'"
 let g:bufExplorerDisableDefaultKeyMapping = 1
 let g:tagbar_sort=0
 let g:tagbar_compact=1
@@ -165,6 +167,14 @@ nmap \f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap \i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 "list the file which include this file
 nmap \I :cs find i <C-R>=expand("%:t")<CR><CR>
+
+"Add shortcuts for quickly comenting out codes.
+" Python style
+vnoremap <silent> <C-i> :s/^/#/<cr>:noh<cr>
+vnoremap <silent> <C-u> :s/^#//<cr>:noh<cr>
+" C/C++ style 
+vnoremap <silent> <C-j> :s!^!//!<cr>:noh<cr>
+vnoremap <silent> <C-h> :s!^//!!<cr>:noh<cr>
 
 if has("cscope") 
     set nocsverb

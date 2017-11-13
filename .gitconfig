@@ -1,9 +1,12 @@
 [core]
 	autocrlf = input
 	editor = vim
+	excludesfile = /root/.gitignore_global
 [user]
 	name = Greg Ge
 	email = Greg.Ge@emc.com
 
 url= git@github.com:storylike/myvim.git
 
+[init]
+	templatedir = ~/.git_templates

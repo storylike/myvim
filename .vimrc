@@ -3,9 +3,9 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=/root/.vim/bundle
-set rtp+=/root/.vim/bundle/Vundle.vim
-set rtp+=/root/.vim/bundle/ctrlp.vim
+set rtp+=~/.vim/bundle
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/ctrlp.vim
 call vundle#begin()
 " Add plugin support here, format Plugin '*.vim'
 " alternatively, pass a path where Vundle should install plugins
@@ -201,4 +201,4 @@ set number
 
 " Enable multi-color highlight plugin: mark.vim"
 let mapleader = ";"
-source /root/.vim/bundle/mark.vim
+source ~/.vim/bundle/mark.vim

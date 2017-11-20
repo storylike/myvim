@@ -1,7 +1,7 @@
 [core]
 	autocrlf = input
 	editor = vim
-	excludesfile = /root/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
 	name = Greg Ge
 	email = Greg.Ge@emc.com

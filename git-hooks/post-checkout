@@ -14,7 +14,7 @@ new_head="$2"
 RED='\033[0;31m'     # Color Red
 GREEN='\033[0;32m'   # Color Green
 NC='\033[0m'    # No color
-if [ "$3" == "0" ]
+if [ "$3" -eq "0" ]
 then
     echo "File checkout!"
 else

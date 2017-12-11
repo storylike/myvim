@@ -13,9 +13,11 @@ fi
 
 # added by Anaconda3 4.4.0 installer
 export PATH=/opt/anaconda3/bin:$PATH
+export PYTHONPATH=$HOME/greg/caffe/python:$PYTHONPATH
+export CPLUS_INCLUDE_PATH=/usr/include/python2.7
 ccdes_BB=/mnt/hgfs/Shared/ccdes_BB
 ccdes=/mnt/hgfs/Shared/ccdes
-caffe=/mnt/hgfs/Shared/caffe
+caffe=~/greg/caffe
 # enable XON/XOFF control
 stty -ixon
 # Color mapping

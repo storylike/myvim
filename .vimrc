@@ -49,6 +49,8 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'ervandew/supertab'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'webdevel/tabulous'
+" Auto completion engine for VIM"
+" Plugin 'Valloric/YouCompleteMe'"
 call vundle#end()
 
 

@@ -23,5 +23,5 @@ else
     printf "Checking out branch from ${RED}$origin_branch${NC} to ${GREEN}$target_branch${NC}!\n"
 fi
 
-find . -name '*.c' -o -name '*.h' -o -name '*.py' -o -name '*makefile*' -o -name '*.xml' > ./cscope.files
+find . -name '*.c' -o -name '*.h' -o -name '*.py' -o -name '*makefile*' -o -name '*.xml' -o -name '*.js' > ./cscope.files
 cscope -Rbq

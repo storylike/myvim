@@ -204,3 +204,5 @@ set number
 " Enable multi-color highlight plugin: mark.vim"
 let mapleader = ";"
 source ~/.vim/bundle/mark.vim
+source ~/.vim/bundle/pylint.vim
+

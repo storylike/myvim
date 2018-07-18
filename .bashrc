@@ -37,4 +37,8 @@ BLUE='\[\033[1;34m\]'
 cyan='\[\033[0;36m\]'
 CYAN='\[\033[1;36m\]'
 NC='\[\033[0m\]'
-PS1="$yellow[$CYAN\t$yellow][$red\u$white@$purple\h$yellow][$GREEN\w$grey$yellow]$NC# "
+PS1="$yellow[$CYAN\t$yellow][$red\u$white@$purple\h$yellow][$GREEN\w$grey$yellow]$yellow $(parse_git_branch)$yellow$NC$ "
+parse_git_branch() {
+         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+#export PS1+="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
